@@ -1,0 +1,49 @@
+<!--
+ <!DOCTYPE html>
+ 告诉浏览器，用什么版本来解析该页面
+ -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>列表标签</title>
+</head>
+<body>
+<!-- 
+列表标签:
+	ul:无序列表 可以嵌套
+			type:规定列表的项目符号类型,
+			可取值 disc,square,circle.默认值为disc
+	li:列表项
+		常用属性:
+	type:这个属性只适用于无序和有序列表，用于设定项目符号，默认值为disc
+	value:这个属性只适用于有序列表，用于设定列表的项目数字
+		
+	ol:有序列表
+		常用属性:
+	type:这个属性规定列表中使用的标记类型。可取值1 A a I i.
+	start:这个属性规定列表的起始值
+		
+ -->
+ <ul type="disc">
+ 	<li>java se</li>
+ 	<li type="square">java web</li>
+ 	<li>ssm框架</li>
+ 	<ul type="square">
+	 	<li>java se1</li>
+	 	<li>java web1</li>
+	 	<li>ssm框架1</li>
+	 	<li>spring boot1</li>
+	 </ul>
+ 	<li>spring boot</li>
+ </ul>
+ <hr/>
+ 
+ <ol>
+ 	<li>java se1</li>
+ 	<li value="3">java web1</li>
+ 	<li type="square">ssm框架1</li>
+ 	<li>spring boot1</li>
+ </ol>
+</body>
+</html>
