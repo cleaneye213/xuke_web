@@ -4,6 +4,6 @@ html
 css
 js
 jquery
-数据库
+mysql
 jsp
 servlet
