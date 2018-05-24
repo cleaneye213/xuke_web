@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单标签</title>
+</head>
+<body>
+<!-- 
+form:
+	<form>一个页面可以有多个表单标签,但是不能嵌套
+	不能如下使用：
+	<form>
+		<form>11222</form>
+	</form>
+	我们通常提交数据是提交form表单里的数据
+	（input,select,checkebox,radio,textarea）
+	
+	action="":填写的是提交到服务器的URL地址或者是页面
+		例：action="/portal/saveUser.do"
+			action="/portal/saveUser.jsp"
+	method:默认="get",还可以是post
+		get与post的区别
+		get提交：数据或者参数会显示浏览器的地址里，不安全，而且传递的数据长度有限
+			是1024k;
+			例：
+			http://localhost/webDemo2/index.html?userName=admin&password=admin
+		post提交：数据或者参数不会显示浏览器的地址里，相对比较安全，
+			而且传递的数据不受限制的;
+		只提交标签有name属性的value,如果标签被禁用掉disabled="disabled" 
+		也不能提交到后台。
+		如果标签设置为readonly=true,数据是还可以被传递到后台的
+		enctype:--设置enctype，默认application/x-www-form-urlencoded
+			注意：如果上传附件的话，要设置为：multipart/form-data
+ -->
+<form action="index.html" method="get">
+	<input type="text" name="userName" value="admin"/><br/>
+	<input type="password" name="password" value="admin"/><br/>
+	
+	<input type="submit" value="get提交">
+</form><br><br><br>
+<form action="index.html" method="post">
+	<input disabled="disabled" type="text" name="userName" value="admin"/><br/>
+	<input readonly="true" type="password" name="password" value="admin"/><br/>
+	<input name="按钮" type="submit" value="post提交">
+</form>
+<form action="index.html" method="post" enctype="multipart/form-data">
+	<input disabled="disabled" type="text" name="userName" value="admin"/><br/>
+	<input readonly="true" type="password" name="password" value="admin"/><br/>
+	<input name="按钮" type="submit" value="post提交">
+</form>
+</body>
+</html>
