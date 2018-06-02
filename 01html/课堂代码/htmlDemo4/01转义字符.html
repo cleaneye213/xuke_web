@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html>
+	<meta charset="UTF-8"/>
+	<head>
+		
+	</head>
+	<body>
+		<!--
+		特殊字符
+		< : &lt;
+		> : &gt;
+		-->
+		
+		<!--a<b-->a &lt; b  <br/>
+		<!-- a>b-->-a &gt; b
+		<pre>
+			<!--解析成普通字符串-->
+			a &lt;b
+			a &lt;b
+		</pre>
+		
+		<pre>
+			package cn.jizon.p2p;
+			public abstract class Contain {
+				
+				public final static String TRANSFER_PREFIX = "YUT" ;
+				public final static String BORROW_PREFIX = "YUB" ;
+				
+				/**
+				 * 用于type类型加密的密钥
+				 */
+				public final static String TYPE_KEY = "A1B2C3D4E5F60718";
+			}
+		</pre>
+		<!--只渲染出一个空格 如果要多个空格要 &nbsp;-->
+		<span style="font-size: large;">dsd         dd&nbsp;&nbsp;&nbsp;&nbsp;d</span>
+		<!--版权符号 -->
+		&copy;2018-百度
+		
+		<pre>
+				显示结果  描述  实体名  实体号  
+				¢ 分 &cent; &#162; 
+				£ 英镑 &pound; &#163; 
+				¥ 人民币元 &yen; &#165; 
+				§ 章节 &sect; &#167; 
+				© 版权 &copy; &#169; 
+				® 注册 &reg; &#174; 
+				× 乘号 &times; &#215; 
+				÷ 除号 &divide; &#247; 	
+			</pre>
+
+	</body>
+</html>

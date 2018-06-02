@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>h5新标签</title>
+	</head>
+	<body>
+		<form>
+			调色板：<input type="color" name="color" /> <br />
+			日期date：<input type="date" name="date"/>
+			时间time:<input type="time" name="time" /><br />
+			月份month：<input type="month" name="month" /><br /><br />
+			数字类型number:<input type="number" name="num" /><br /><br />
+			数值范围：<input type="range" name="rg" min="1" max="99" value="50"/>
+			
+			
+			<br /><br />
+			email:<input type="email" name="email" value="" /><br />
+			tel:<input type="tel" name="tel" /><br />
+			
+			文件标签(不是h5特有的)：
+			<input type="file" name="file" />
+			<input type="button" onclick="addHtml();"  value="插入"/>
+		</form>
+		
+		
+		<input type = "checkbox" checked=checked>复选框1
+		<input type = 'checkbox' checked=checked>复选框2
+		<div id="hdiv">
+			dddd
+			</div>
+		<script type="text/javascript">
+			var html='<input type = "checkbox" checked=checked>复选框3';
+			function addHtml(){
+				document.getElementById("hdiv").innerHTML=html;
+			}
+		</script>
+	</body>
+</html>

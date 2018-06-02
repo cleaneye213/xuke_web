@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>表单元素</title>
+</head>
+<body>
+<!-- 
+	基本上所有的标签都有id属性，属性值不能重复
+ -->
+<div id="banner" style="padding-top: 5px;height:30px;background-color: #a2a6af">
+	用户注册
+</div>
+<div>
+<!-- 
+?userName=22&realName=22&pwd=&pwd1=&sex=2&habit=3&love=2&love=3
+第一参数前面需要用?隔开，后面参数用&隔开
+
+ -->
+<form action="work1.html" method="get">
+	<!-- 隐藏域 -->
+	<input type="hidden" name="id" id="id" value="888888">
+	<table width="100%" border="1">
+		<tr>
+			<!-- 
+				这里的宽度是相对上一个父标签的宽度
+				通常只需要在第一行写上宽度就可以了，其他tr里的td不需要设置
+				如果其他行有设置宽度，那宽度以最大值为准	
+			 -->
+			<td align="right" width="15%">用户名：</td>
+			<td width="35%"><input type="text" name="userName" id="userName" value="" placeholder="请输入用户名"/></td>
+			<td align="right" width="15%">姓名：</td>
+			<td><input type="text" name="realName" id="realName" value="" placeholder="请输入真实姓名"/></td>
+		</tr>
+		<tr>
+			<!-- 这里的宽度是相对上一个父标签的宽度 -->
+			<td align="right">密码：</td>
+			<td><input type="password" name="pwd" id="pwd" value="" max="6" placeholder="请输入密码"/></td>
+			<td align="right">确认密码：</td>
+			<td><input type="password" name="pwd1" id="pwd1" value="" placeholder="请再次确认密码"/></td>
+		</tr>
+		<tr>
+			<!-- 这里的宽度是相对上一个父标签的宽度 -->
+			<td align="right">性别：</td>
+			<td>
+				<!-- 
+					一组radio 如果name相同:代表是同一组，只能提交选中的值到后台
+					如果name不同：代表不同组，是两个字段，可以提交两不同name选中的值
+					checked="checked" 或者 checked="true"表示选中
+				 -->
+				<input type="radio" name="sex" id="sex1" value="1"  myattr="dddd" checked="checked"/>男
+				<input type="radio" name="sex" id="sex2" value="2"  myattr="dddd" />女
+				<input type="radio" name="sex" id="sex3" value="3"  myattr="dddd" />人妖
+			</td>
+			<td align="right">习惯：</td>
+			<td>
+				<input type="radio" name="habit" id="habit1" value="3"  myattr="dddd"/>左手
+				<input type="radio" name="habit" id="habit2" value="4"  myattr="dddd"/>右手
+			</td>
+		</tr>
+		<tr>
+			<td align="right">爱好：</td>
+			<td>
+				<!-- 
+					一组checkbox 如果name相同:代表是同一组，只能提交选中的值到后台
+					如果name不同：代表不同组，是两个字段，可以提交两不同name选中的值
+					多选
+					checked="checked" 或者 checked="true"表示选中
+				 -->
+				<input type="checkbox" name="love" id="love1" value="1" checked="checked">骑行
+				<input type="checkbox" name="love" id="love2" value="2">游泳
+				<input type="checkbox" name="love" id="love3" value="3">射箭
+				<input type="checkbox" name="love" id="love4" value="4" checked="true">打豆豆
+			</td>
+			<td align="right">学历：</td>
+			<td>
+				<!-- 
+					selected="selected" 或者
+					selected="true" 表示默认选中
+					只能单选
+				 -->
+				<select name="education" style="width:60%">
+					<option value="">请选择学历</option>
+					<option value="001">小学</option>
+					<option value="002">初中</option>
+					<option value="003" selected="true">高中</option>
+					<option value="004">专科</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td align="right">
+				个人简介：
+			</td>
+			<td colspan="3">
+				<!-- 
+					rows="" ~~文本域的高度
+					cols="" ~~文本域的宽度
+				 -->
+				<textarea name="remark" rows="4" cols="47" placeholder="请写不少于100个字的个人简介"></textarea>
+			</td>
+		</tr>
+	</table>
+	<!-- <br/><br/> -->
+	<table width="100%">
+		<tr>
+			<td align="center" height="50px;">
+				<input type="submit" value="提交">
+				<!-- 
+					只能放在form表单内容才生效
+				 -->
+				<input type="reset" value="重置">
+			</td>
+		</tr>
+	</table>
+</form>
+</div>
+</body>
+</html>
