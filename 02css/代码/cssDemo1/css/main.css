@@ -1,0 +1,59 @@
+/* 元素初始化，重置 */
+
+
+/* 1.所有元素内外边距初始化 */
+
+
+/* 主要元素包括：body,p,h1,h2,h3,h4,h5,h6,ul,ol,dl,dd,dt,li,put, */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 2.列表小圆点格式化 */
+ul,ol {
+    list-style: none;
+}
+
+
+/* 3. a下划线删除 */
+a {
+    text-decoration: none;
+}
+
+
+/* 4. 伪类 */
+.clearfix:before,.clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    zoom: 1;
+}
+
+/* 5.浮动 */
+.rf {
+    float: right;
+}
+
+.lf {
+    float: left;
+}
+
+/* 6.标题标签 */
+
+h1,h2,h3,h4,h5,h6 {
+    font-size: 100%;
+    font-weight: normal;
+}
+
+/* 7.input */
+input {
+    outline: none;
+    border: 0;
+}

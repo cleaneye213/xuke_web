@@ -1,0 +1,11 @@
+/*
+写样式，自定义
+*/
+div{
+	/* key:value;  value里如果有空格，要用“value” 或者用（value）*/
+	border: 2px solid #00FFFF;
+	border-color: aquamarine;
+	font-size: larger;
+	width: 200px;
+	height: 300px;
+}

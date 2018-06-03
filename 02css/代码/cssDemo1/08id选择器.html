@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			/*
+			id选择器
+			 #样式名称{
+				 key：value;
+				 key:value;
+			 }
+			 仅限于某个标签，不推荐设置多个id同名的标签
+			*/
+			#mydiv{
+				border: 1px solid orangered;
+				color: #228B22;
+				width: 200px;
+				height: 200px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="mydiv">
+			这个是div   id选择 器
+		</div>
+		<!--
+		不能设置 id="mydiv"  跟上面div同名id了
+		虽然样式能正常显示，但不P符合逻辑
+		*/
+		-->
+		<p  id="my">这是段落</p>
+	</body>
+</html>

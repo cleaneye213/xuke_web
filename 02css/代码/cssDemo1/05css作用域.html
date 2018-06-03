@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>各个css引入的作用域</title>
+		<link rel="stylesheet" type="text/css" href="css/main1.css"/>
+		<style type="text/css">
+			div{
+				border-color: forestgreen;
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 
+		同时有link ,style ,style属性引入样式
+		（同一样式，不同的设置）
+		哪一个css会起生效?
+		main1.css<style引入的css<style属性里的css
+		-->
+		
+		<div style="border-color: orangered;">
+			css生效结果
+		</div>
+	</body>
+</html>

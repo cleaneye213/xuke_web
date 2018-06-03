@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        /*
+			字体属性
+			"courier new" ：用双引号包起来
+			*/
+
+        .myp {
+            font-family: "courier new";
+            color: #8A2BE2;
+            line-height: 30px; /*行高*/
+            font-size: 20px; /*字体大小*/
+            font-style: italic; /*字体风格*/
+            font-weight: 600; /*字体粗细*/
+        }
+        /*td
+			内容自动换行
+			word-wrap:设置或检索当当前行超过指定容器的边界时是否断开转行 
+			取值： 
+			normal :　 默认值。允许内容顶开指定的容器边界 
+			break-word :　 内容将在边界内换行。如果需要，词内换行( word-break )也将发生
+			word-break:设置或检索对象内文本的字内换行行为。尤其在出现多种语言时 
+			*/
+
+        .mytd {
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        .mytable {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        div.test {
+            white-space: nowrap;
+            width: 12em;
+            overflow: hidden;
+            border: 1px solid #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="myp">
+        测试字体第一行
+        <br/> 测试字体第二行
+        <br/>
+    </p>
+    <table class="mytd" border="1" bordercolor="blue" cellspacing="0" width="300" height="300">
+        <tr>
+            <td width="80px">测试是否换行测试换行</td>
+            <td>测试是否换行测试换行</td>
+        </tr>
+        <tr>
+            <td width="80px">11111111111111111111111111111111111111111</td>
+            <td>测试是否换行测试换行</td>
+        </tr>
+    </table>
+    <br>
+    <!--超过td宽度，然后隐藏多余的文字，以...替换-->
+    <div style="width: 80px;" class="mytable">
+		测试是否自动隐藏多余的文字，以...替换
+	</div>
+    <p>以下 div 容器内的文本无法完全显示，可以看到它被裁剪了。</p>
+    <p>div 使用 &quot;text-overflow:ellipsis&quot;:</p>
+
+    <div class="test" style="text-overflow:ellipsis;">This is some long text that will not fit in the box</div>
+    <p>div 使用 &quot;text-overflow:clip&quot;:</p>
+    <div class="test" style="text-overflow:clip;">This is some long text that will not fit in the box</div>
+    <p>div 使用自定义字符串 &quot;text-overflow: &gt;&gt;&quot;(只在 Firefox 浏览器下有效):</p>
+    <div class="test" style="text-overflow:'>>';">This is some long text that will not fit in the box</div>
+</body>
+
+</html>

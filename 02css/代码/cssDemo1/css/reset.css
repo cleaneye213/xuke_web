@@ -1,0 +1,495 @@
+/* 注：因为大部分文字都是12 颜色相同，所以总体设置 */
+body {
+    font-size: 12px;
+    color: #666666;
+}
+
+
+
+/* 1.login最外侧盒子设定 高29 背景颜色#f7f7f7 下边框1 */
+.login {
+    height: 29px;
+    background: #f7f7f7;
+    border-bottom: 1px solid #dddddd;
+}
+
+
+/* 1.1 login内容部分设置 高20 宽1200 居中*/
+.loginbox {
+    width: 1200px;
+    height: 29px;
+    margin: 0 auto;
+}
+
+/* 1.11左侧欢迎栏设置 居中 注意浮动 */
+.loginbox h3 {
+    line-height: 29px;
+    float: left;
+}
+
+
+
+/* 1.12右侧我的订单设置 宽290 高29 居中 注意浮动 */
+.loginrg {
+    width: 290px;
+    height: 29px;
+    line-height: 29px;
+    float: right;
+}
+
+/* 1.12登录与未登录设置隐藏 注意浮动*/
+.inlogin {
+    float: left;
+}
+
+.unlogin {
+    display: none;
+}
+
+
+
+/* 1.121已经登录设置 a颜色orange */
+.inlogin a {
+    color: orange;
+}
+
+
+
+/* 1.122未登录设置 span左右间距 a 鼠标点击变颜色; */
+.unlogin span,
+.mylogin span {
+    margin: 0 10px;
+}
+
+.unlogin a,
+.mylogin a {
+    color: #666666;
+}
+
+
+.unlogin a:hover,
+.mylogin a:hover {
+    color: orange;
+}
+
+/* 2.search部分设置 宽默认 高90 */
+.search {
+    height: 90px;
+}
+
+
+
+/* 内部内容盒子设置 宽1200 高90 居中 背景颜色主要测试用*/
+.searchbox {
+    width: 1200px;
+    height: 90px;
+    margin: 0 auto;
+    /* background: palegreen; */
+}
+
+
+
+/* 2.1左侧logo设置 位置 上29 左17 */
+.searchbox a {
+    margin-left: 17px;
+    margin-top: 29px;
+    /* 注：浮动或者转化行内块元素，一般浮动为主 */
+    /* display: inline-block; */
+    float: left;
+}
+
+
+
+/* 2.2搜索框设置 宽616 高38 边框 位置左120 上36 浮动 */
+.searchcar {
+    width: 616px;
+    height: 38px;
+    border: 1px solid #37ab40;
+    margin-left: 120px;
+    margin-top: 36px;
+    /* 注：出问题找浮动 */
+    float: left;
+}
+
+
+/* 搜索框搜索栏设置 宽516 高38 居中 背景图 缩进40 */
+.searchcar .txt {
+    width: 516px;
+    height: 38px;
+    line-height: 38px;
+    background: url(images/search.png) no-repeat 12px 9px;
+    /* background: palevioletred; */
+    text-indent: 40px;
+}
+
+
+/* 搜索框搜索按钮设置 宽100 高39 背景颜色 字白 14 行高38居中 浮动*/
+.searchcar .sub {
+    width: 100px;
+    height: 39px;
+    background: #37ab40;
+    font-size: 14px;
+    color: white;
+    line-height: 39px;
+    float: right;
+}
+
+
+
+/* 2.3右侧购物车 宽200 高40 右浮动 位置上36 */
+.buy {
+    width: 200px;
+    height: 40px;
+    float: right;
+    margin-top: 36px;
+    /* background-color: red; */
+}
+
+
+/* 设置a 宽158 高38 居中 背景图 字14颜色 缩进56 */
+.buy a {
+    /* 因为要给行内元素设置宽高 改变类型 */
+    /* display: inline-block; */
+    float: left;
+    width: 158px;
+    height: 38px;
+    border: 1px solid #dddddd;
+    margin-top: 0;
+    margin-left: 0;
+    color: #37ab40;
+    font-size: 14px;
+    line-height: 38px;
+    background: url(images/buycar.png) no-repeat 14px 10px;
+    text-indent: 56px;
+    /* background: purple; */
+}
+
+
+/* 设置span 宽40 高40 背景颜色 字18 白 居中 */
+.buy span {
+    /* 因为要给行内元素设置宽高 改变类型 */
+    /* display: inline-block; */
+    float: right;
+    width: 40px;
+    height: 40px;
+    background: #ff8800;
+    font-size: 18px;
+    color: white;
+    line-height: 40px;
+    text-align: center;
+    /* float:right; */
+}
+
+
+
+/* 3.全部商品分类最外侧 高40 上26 边框2 #37ab40 */
+.cate {
+    height: 40px;
+    margin-top: 26px;
+    border-bottom: 2px solid #37ab40;
+}
+
+
+
+/* 内容设置 宽1200 高40 居中 */
+.catecon {
+    width: 1200px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+
+
+/* 3.1全部商品分类 宽200高40 居中 字14 白背景色 浮动 */
+.all {
+    width: 200px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 14px;
+    color: white;
+    background: #37ab40;
+    /* 设置浮动主要是给首页list找边界 */
+    float: left;
+}
+
+
+
+/* 3.2首页设置 宽215高40 左35 上下居中 */
+.catelist {
+    width: 215px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 35px;
+    /* 注：有问题找浮动 */
+    float: left;
+}
+
+
+/* 设置li 字14 横排一行浮动 */
+.catelist li {
+    float: left;
+}
+
+
+
+/* span a 标签设置 左右20 字体颜色 */
+.catelist span {
+    margin: 0 20px;
+}
+
+.catelist a {
+    color: #666666;
+}
+
+
+
+/* 4.slide 高270 内容宽1200高270 居中*/
+.slide {
+    height: 270px;
+}
+
+.slidecon {
+    width: 1200px;
+    height: 270px;
+    margin: 0 auto;
+}
+
+
+
+/* 4.1左侧水果列表设置 宽200高270 有问题找浮动 */
+.flist {
+    width: 200px;
+    height: 270px;
+    /* background: black; */
+    float: left;
+}
+
+
+
+/* 水果列表 宽198 高44 边框 居中 背景图 */
+.flist li {
+    width: 198px;
+    height: 44px;
+    border: 1px solid #f7f7f7;
+    border-top: 0;
+    line-height: 44px;
+    text-align: center;
+    background: url(images/sprite.png) no-repeat 33px 9px;
+}
+
+
+
+/* 雪碧图位置设置采用 nth选择器 */
+.flist li:nth-child(2) {
+    background-position-y: -41px;
+}
+
+.flist li:nth-child(3) {
+    background-position-y: -91px;
+}
+
+.flist li:nth-child(4) {
+    background-position-y: -141px;
+}
+
+
+.flist li:nth-child(5) {
+    background-position-y: -191px;
+}
+
+.flist li:nth-child(6) {
+    background-position-y: -241px;
+}
+
+
+
+/* a 字14 背景图 有问题找浮动 yo*/
+.flist a {
+    font-size: 14px;
+    background: url(images/sprite.png) no-repeat 170px -291px;
+    /* display: inline-block; */
+    float: right;
+    width: 198px;
+    height: 44px;
+}
+
+
+
+/* 4.2轮播图设置 宽760 高279 有问题找浮动 */
+.slidepic {
+    width: 760px;
+    height: 279px;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+
+
+/* 轮播图宽760*4 高270 有问题找浮动*/
+.slist {
+    width: 3040px;
+    height: 270px;
+}
+
+.slist li {
+    float: left;
+}
+
+
+
+/* 4.22左右按钮 宽25高25 背景图 定位*/
+.lfbtu {
+    width: 25px;
+    height: 25px;
+    background: url(images/sprite.png) no-repeat 0px -350px;
+    position: absolute;
+    bottom: 123px;
+    left: 12px;
+    cursor: pointer;
+}
+
+
+.rgbtu {
+    width: 25px;
+    height: 25px;
+    background: url(images/sprite.png) no-repeat 0px -400px;
+    position: absolute;
+    bottom: 123px;
+    right: 12px;
+    cursor: pointer;
+}
+
+
+/* 4.23小圆点设置 */
+.rd {
+    height: 11px;
+    /* background: black; */
+    width: 760px;
+    position: absolute;
+    bottom: 19px;
+    left: 0;
+    text-align: center;
+}
+
+
+.rd li {
+    width: 11px;
+    height: 11px;
+    /* background: red; */
+    border-radius: 50%;
+    /* 注：不适用浮动，因为浮动不能居中 */
+    /* float:left; */
+    display: inline-block;
+}
+
+.active {
+    background: greenyellow;
+}
+
+/* 4.3右侧广告 消除行间距设置父元素为0*/
+.rgpic {
+    font-size: 0px;
+}
+
+/* 5.foods 设置外高335 上25 内宽1200高335 居中*/
+.foods {
+    height: 335px;
+    margin-top: 25px;
+}
+
+.foodscon {
+    width: 1200px;
+    height: 335px;
+    margin: 0 auto;
+}
+
+
+
+/* 上面文字 */
+.fhead {
+    width: 1200px;
+    height: 29px;
+    border-bottom: 2px solid #37ab40;
+}
+
+
+/* a 海鲜水产 16px margin-right:20px; */
+.fheada {
+    font-size: 16px;
+    margin-right: 20px;
+    color: #37ab40;
+    font-weight: bold;
+    float: left;
+}
+
+
+/* li标签 高29 左10 */
+.fheadlist li {
+    height: 29px;
+    line-height: 29px;
+    float: left;
+    margin-left: 10px;
+}
+
+
+
+/* 更多设置 高20 */
+.fheadlista {
+    height: 29px;
+    line-height: 29px;
+    float: right;
+}
+
+
+
+/* 5.2左侧广告 宽200 高300 有问题找浮动 */
+.lfad {
+    width: 200px;
+    height: 300px;
+    float: left;
+}
+
+
+
+/* 5.3右侧列表产品 宽1000 高300*/
+.foodslist {
+    width: 1000px;
+    height: 300px;
+    /* overflow: hidden; */
+    float: left;
+}
+
+
+
+/* 列表设置 宽249 高299 边框下右 居中 */
+.foodslist li {
+    width: 249px;
+    height: 299px;
+    border-bottom: 1px solid #666666;
+    border-right: 1px solid #666666;
+    text-align: center;
+    float: left;
+}
+
+
+
+/* 基围虾设置 字14 高50 下10 */
+
+.foodslist h5 {
+    font-size: 14px;
+    height: 50px;
+    line-height: 50px;
+    margin-bottom: 10px;
+}
+
+/* 39.9设置 字20 红加粗 高35 上17 */
+.foodslist div {
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+    height: 35px;
+    line-height: 35px;
+    margin-top: 17px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			/*
+			伪类元素选择器
+			标签:元素的个数{
+				
+			}
+			*/
+			ul li:first-child{
+				color: #228B22;
+			}
+			li:nth-child(2){
+				color: #FF4500;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			设置不同li为不同的样式
+		-->
+		<ul>
+			<li>这是li1</li>
+			<li>这是li2</li>
+			<li>这是li3</li>
+			<li>这是li4</li>
+			<ul>
+				<li>第二层li</li>
+			</ul>
+		</ul>
+		<dl>
+			<li>这是dl中的li1</li>
+			<li>这是dl中的li2</li>
+			<li>这是dl中的li3</li>
+			<li>这是dl中的li4</li>
+		</dl>
+	</body>
+</html>

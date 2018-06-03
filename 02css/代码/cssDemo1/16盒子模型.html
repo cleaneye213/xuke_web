@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#div1{
+				width: 200px;
+				height: 200px;
+				/*background-color: #228B22;*/
+				border: 1px solid #228B22;
+				padding: 10px 5px 20px;
+			}
+			#div3{
+				width: 200px;
+				height: 200px;
+				/*background-color: #228B22;*/
+				border: 1px solid #FF0000;
+				padding: 10px 5px 20px;
+				margin: 10px;
+			}
+			#div2{
+				width: 100px;
+				height: 100px;
+				/*background-color: #8A2BE2;*/
+				border: 1px solid #8A2BE2;
+				margin: 5px;
+				padding: 10px;
+			}
+			#div4{
+				width: 200px;
+				height: 200px;
+				/*background-color: #228B22;*/
+				border: 1px solid #FF0000;
+				padding: 10px;
+				margin: 10px;
+			}
+		</style>
+	</head>
+	<body>
+		<!--
+			padding:元素内边距
+			padding: 10px;	如果是一个值，是设置上，右，下，左
+					div1内部元素的“面积”(200-10-10)*(200-10-10)
+			padding设置两值，中间通过空格
+				padding: 10px 5px; 上/下10px；右左5px;
+				padding: 10px 5px 20px;
+			推荐用下面
+			padding-top:
+			padding-right:
+			padding-bottom:
+			padding-left:
+			----------------------
+			margin:10px
+				外边距:
+			margin-top:
+			margin-right:
+			margin-bottom:
+			margin-left:
+		-->
+		<div id="div1">
+			这是div1这是div1这是div1这是div1这是div1这是div1这是div1
+			这是div1这是div1这是div1这是div1这是div1这是div1这是div1
+			这是div1这是div1这是div1这是div1这是div1这是div1这是div1
+		</div>
+		<!--
+			margin:10px
+			div的面积
+			200*200--》内部面积
+			--》
+			(200+1)*(200+1)内部面积+边框
+			--》外边距
+			(200+1+10)*(200+1+10)
+		-->
+		<div id="div3">
+			<div id="div2">
+					这是div2
+			</div>
+		</div>
+		
+		<div id="div4">
+			<div id="div2">
+					这是div2
+			</div>
+		</div>
+	</body>
+</html>
