@@ -1,0 +1,17 @@
+1、扩展Date对象，增加format方法;
+2、编写一个dataUtils工具类，并编写测试方法：
+	含有以下方法：
+	//转换当前日期对象为日期字符串 
+	getSmpFormatNowDate(pattern);
+//转换long值为日期字符串 
+getFormatDateByLong(l,pattern);
+
+//转换日期对象为日期字符串
+getFormatDate(date, pattern);
+
+//日期增加天数
+addDate(date,addNum);
+
+3、Java作业：
+	有两个存放字符串List集合,请输出这个两个集合的交集对象；
+	有两个存放User对象（id,name,sex）List集合,请输出这个两个集合的交集对象；
