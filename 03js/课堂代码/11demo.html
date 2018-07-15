@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		
+		<input type="button" value="测试1" onclick="test();" /><br />
+		<input type="button" value="删除" onclick="test2();" /><br />
+		<input type="button" value="测试2" onclick="test3();" /><br />
+		<script type="text/javascript">
+			function test(){
+				var nowDate=new Date();
+				alert(nowDate);
+				//2018-07-15 15:19:00
+				//new SimpleDateFormate("yyyy-MM-dd hh:mm:ss").format(new Date());
+				var year=nowDate.getYear();//-->1900+118
+				year=nowDate.getFullYear();//2018
+				var month=nowDate.getMonth();
+				month=month+1;//从0开始算
+				if(month<10){
+					month="0"+month;
+				}
+				var date=nowDate.getDate();
+				var hour=nowDate.getHours();
+				var mint=nowDate.getMinutes();
+				var sec=nowDate.getSeconds();
+				alert(year+"-"+month+"-"+date+" "+hour+":"+mint+":"+sec);
+			}
+			//作业
+			
+			/**
+			 * date 日期对象
+				formate 是yyyy-MM-dd hh:mm:ss;yyyy;
+			 */
+			function getDateFormate(date,formateParttern){
+				
+			}
+			function getNowDateFormate(formateParttern){
+				
+			}
+			/*根据毫秒数转成日期 1531640181565*/
+			function getDateFormateByMillons(dateMillons,formateParttern){
+				
+			}
+		</script>
+	</body>
+</html>

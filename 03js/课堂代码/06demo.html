@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<div id="myDiv">
+			<input type="button" value="测试" onclick="test();" /><br />
+			<input type="button" value="测试2" onclick="test2();" /><br />
+		</div>
+		<script type="text/javascript">
+			
+			function test(){
+				//数组定义
+				var ary=new Array();
+				for(var i=0;i<100;i++){
+					ary[i]=i;
+				}
+				//输出
+				for(var i=0;i<ary.length;i++){
+					document.write("ary的值："+ary[i]+"<br/>");
+				}
+			}
+			function test2(){
+				//可以这么定义但不推荐
+				var a3  =[123,"45",new Date(),true];
+				for (var i=0;i<a3.length;i++) {
+					alert(a3[i]);
+				}
+			}
+			
+		</script>
+	</body>
+</html>

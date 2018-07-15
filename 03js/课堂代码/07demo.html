@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<div id="myDiv">
+			<input type="button" value="测试" onclick="test('a','b');" /><br />
+			<input type="button" value="测试2" onclick="test2();" /><br />
+		</div>
+		<script type="text/javascript">
+			
+			function test(obj1,obj2,obj3){
+				alert(obj1+obj2+test2());
+				//user.name="admin";
+				//user.sex="na";
+				user();
+				var person=new Person("dddd","man");
+				person.eat();
+				return;
+			}
+			
+			function test2(){
+				return "c";
+			}
+			
+			function Person(name,sex){
+				var name1=name;
+				var sex1=sex;
+				this.eat=function(){
+					alert("吃饭"+name1);
+				}
+			}
+			
+			var user=function userFun(){
+				var name;
+				var sex;
+				alert("111");
+				var eat=function(){
+					alert("吃饭");
+				}
+			}
+		</script>
+	</body>
+</html>

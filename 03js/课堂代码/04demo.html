@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<div id="myDiv">
+			<input type="button" value="测试" onclick="test();" /><br />
+			<input type="button" value="测试2" onclick="test2();" /><br />
+		</div>
+		<script type="text/javascript">
+			
+			function test(){
+				var scope=60;
+				
+				switch(scope){
+					case 60:
+						alert("及格");
+						break;
+					case 80:
+						alert("良");
+						break;
+					default:
+						alert("不及格");
+				}
+			}
+			function test2(){
+				var scope="60";
+				switch(scope){
+					case "60":
+						alert("及格");
+						break;
+					case "80":
+						alert("良");
+						break;
+					default:
+						alert("不及格");
+				}
+			}
+			
+		</script>
+	</body>
+</html>

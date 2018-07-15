@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<a href="javascript:void(0);" onclick="test(this);" target="_blank">测试生成随机链接</a>
+		<input type="button" value="测试生成0-100的整数" onclick="test2();" /><br />
+		<script type="text/javascript">
+			function test(obj){
+				var random=Math.random();
+				obj.href="http://www.baidu.com?random="+random;
+			}
+			
+			function test2(){
+				var random=Math.random();
+				random=100*random;
+				//round(x)	把数四舍五入为最接近的整数。
+				alert(Math.round(random));
+				//max(x,y)	返回 x 和 y 中的最高值。
+				//min(x,y)	返回 x 和 y 中的最低值。
+				//floor(x)	方法执行的是向下取整计算。
+			}
+		</script>
+	</body>
+</html>

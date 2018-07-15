@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<div id="myDiv">
+			dssdds
+			<input type="button" value="测试" onclick="test();" /><br />
+			<input type="button" value="测试2" onclick="test2();" />
+		</div>
+		<script type="text/javascript">
+			
+			function test(){
+				var obj=document.getElementById("myDiv");
+				var a;
+				var b = null;
+				//typeof用来判断变量的类型
+				alert(typeof(a));
+				alert(obj);
+			}
+			
+			function test2(){
+				var s='dddd';
+				var num=1111;
+				var num2='1111';
+				alert(num+num2);//1111111
+				alert(num+parseFloat(num2));//2222.0
+				//parseFloat(s)-->NaN(not a number)
+				alert(num+parseFloat(s));//NaN
+				//如果要计算未知的变量，建议先判断是否是有效的数据类型
+				if(!isNaN(s)){
+						alert(num+parseFloat(s));
+				}else{
+					alert("s不是有效的number类型");
+				}
+				document.write("这是document.writer");
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+		<script type="text/javascript" src="js/myFirst.js"></script>
+		<script type="text/javascript">
+			alert("Hello js 1");
+			alert(str);
+		</script>
+	</head>
+	<body>
+		<div style="color: antiquewhite;width: 300px;height: 300px;">
+			<script type="text/javascript">
+				alert("在div里");
+			</script>
+			<input type="button" value="测试" onclick="firstFun();" />
+			<input type="button" value="测试2" onclick="javascript:alert('测试2');" /><br/>
+			<a href="http://www.baidu.com" target="_blank">跳到百度</a><br/>
+			<a href="javascript:void(0);" onclick="checkForward('1');">提示</a>
+		</div>
+		<!--这是htmld的注释-->
+		<script type="text/javascript">
+			alert("Hello js 2");
+		</script>
+	</body>
+	<script type="text/javascript">
+		var str="测试顺序";//全局变量
+		alert("Hello js 3");
+		alert(myjs);
+		
+		
+		function checkForward(flag){
+			if(flag=='1'){
+				window.location.href="http://www.sina.com";
+			}else{
+				window.location.href="http://www.baidu.com";
+			}
+		}
+	</script>
+</html>

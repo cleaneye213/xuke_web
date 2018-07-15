@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<a href="javascript:void(0);" onclick="test();" target="_blank">测试JSON</a>
+		<a href="javascript:void(0);" onclick="test2();" target="_blank">测试JSON数组</a>
+		<script type="text/javascript">
+			function test(){
+				//json字符串
+				var jsonStr='{"id":"1","name":"张三","sex":0,"loginName":"admin","is_del":false}';
+				//alert(jsonStr.id);
+				
+				var jsonObj1={"id":"1","name":"张三","sex":0,"loginName":"admin","is_del":false};
+				alert(jsonObj1.name);
+				// eval('(' + jsonstr1 + ')');
+				//通过eval转义json字符串为json对象
+				var jsonObj=eval('(' +jsonStr+ ')');
+				alert(jsonObj.name);
+			}
+			
+			function test2(){
+				var userAryList={"userList":[{"id":"1","name":"张三","sex":0,"loginName":"admin","is_del":false},{"id":"2","name":"张三2","sex":0,"loginName":"admin2","is_del":false}]};
+				alert("直接获取json数组里的值："+userAryList.userList[1].name);
+				//遍历json数组
+				var userAry=userAryList.userList;
+				for(var i=0;i<userAry.length;i++){
+					alert(userAry[i].name);
+				}
+			}
+		</script>
+	</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<div id="myDiv">
+			<input type="button" value="测试" onclick="test();" /><br />
+			<input type="button" value="测试2" onclick="test2();" /><br />
+		</div>
+		<script type="text/javascript">
+			
+			function test(){
+				var scope=60;
+				for(var i=0;i<100;i++){
+					document.write(i+"<br/>");
+				}
+				
+			}
+			function test2(){
+				for(var i=0;i<100;i++){
+					for(var j=0;j<100;j++){
+						if(j>50){
+							document.write("j的值："+j+"<br/>");
+							break;
+						}
+					}
+					document.write("的值："+i+"<br/>");
+				}
+			}
+			
+		</script>
+	</body>
+</html>

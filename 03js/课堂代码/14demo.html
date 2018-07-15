@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<a href="javascript:void(0);" onclick="test();" target="_blank">测试String新增trim</a>
+		<script type="text/javascript">
+			String.prototype.trim=function(){
+				alert("我要去除头尾空格");
+				return  this.replace(/(^\s+)|(\s+$)/g,"");
+			}
+			function test(){
+				var str=" d是打 发士大夫 ";
+				alert(str.length);
+				str=str.trim();
+				alert(str.length);
+			}
+		</script>
+	</body>
+</html>

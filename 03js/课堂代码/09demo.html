@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<div onmousedown="test();" id="myDiv" style="width: 300px;height: 300px;background-color: aqua;">
+			sdfsdfsdf
+		</div>
+		用户名：<input type="text" name="name" value="" onkeyup="test2();"/><br/><span id="nameError"></span>
+		<script type="text/javascript">
+			function test(){
+				alert("onmousedown");
+			}
+			
+			function test2(){
+				var name=document.getElementsByName("name")[0].value;
+				alert(name);
+				document.getElementById("nameError").innerText="用户名的长度"+(name.length);
+			}
+		</script>
+	</body>
+</html>

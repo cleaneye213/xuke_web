@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<div id="myDiv">
+			<input type="button" value="测试" onclick="test();" /><br />
+		</div>
+		<script type="text/javascript">
+			
+			function test(){
+				var a="123";
+				var b=123;
+				alert((a==b));//会发生类型转换
+				alert((a===b));//不会发生类型转换
+				var c=10;
+				alert((c>a?'c>a':'c<a'));
+				alert(((c>a || b>c)?'c>a':'c<a'));//重点掌握
+			}
+			
+		</script>
+	</body>
+</html>

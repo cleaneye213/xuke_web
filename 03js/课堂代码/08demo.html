@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jsDemo</title>
+	</head>
+	<body>
+		<div id="myDiv">
+			<input type="button" value="测试" onclick="test('a','b');" /><br />
+			<input type="button" value="测试2" onclick="test2();" /><br />
+			<input type="button" value="测试3" onclick="test3();" /><br />
+		</div>
+		<script type="text/javascript">
+			
+			function test(obj1,obj2,obj3){
+				var str="3+4";
+				//把字符串当成js来执行
+				alert(eval(str));//7
+				alert(eval("test2()"));
+				
+			}
+			
+			function test2(){
+				return "c";
+			}
+			
+			function test3(){
+				var name="张三";
+				name=escape(name);
+				
+				var str="%u5F20%u4E09";
+				alert(unescape(str));
+				window.location.href="http://www.baidu.com?name="+name+"&sex=1";
+			}
+		</script>
+	</body>
+</html>
