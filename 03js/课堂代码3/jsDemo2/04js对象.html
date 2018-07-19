@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<select id="s1">
+			<option selected="" value="111">222</option>
+			<option selected="" value="111">222</option>
+
+		</select>
+		
+		
+		<script type="text/javascript">
+			var s1=document.getElementById("s1");
+			var s2=document.getElementById("s2");
+			for(var i=0;i<s1.length;i++){
+				//判断option有没有被选中
+				if(s1[i].selected || s1[i].selected="selected"){
+					s2.appendChild(s1[i]);
+					s1.removeChild(s1[i]);
+				}
+			}
+			//js对象
+			var jsObj={name:"admin",sex:1,create_time:null};
+			//name,sex,create_time属性
+			alert(jsObj.name);
+			alert(jsObj["name"]);
+			
+			//js对象的方法
+			var jsObj2={
+				name:"admin",
+				sex:1,
+				eat:function(name){
+					alert(name+"吃饭");
+				}
+			};
+			jsObj2.eat("张三");
+		</script>
+		
+	</body>
+</html>

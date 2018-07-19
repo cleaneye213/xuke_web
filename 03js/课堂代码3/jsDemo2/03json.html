@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			//json对象
+			var jsonObj={"name":"admin","sex":1,"create_time":null};
+			alert(jsonObj.name);
+			alert(jsonObj["name"]);
+			//遍历json对象
+			for(var key in jsonObj){
+				alert(jsonObj[key]);
+			}
+			//怎么遍历json对象的数组
+			//json数组长的？？
+			var objAry=[{"name":"admin","sex":1,"create_time":null},{"name":"admin1","sex":2,"create_time":"dddd"}];
+			for(var i=0;i<objAry.length;i++){
+				for(var key in objAry[i]){
+					alert(objAry[i][key]);
+				}
+			}
+			
+			alert("============分割符=======");
+			
+			//jsonStr转成json对象
+			//1: eval函数
+			var jsonStr='{"name":"admin","sex":1,"create_time":null}';
+			alert(eval("("+jsonStr+")").name);
+			
+			//2: JSON.parse(str);
+			alert(JSON.parse(jsonStr).name);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+		
+		<a href="javascript:void(0);" onclick="test1()">测试1</a><br/>
+		<a href="javascript:void(0);" onclick="test2()">测试2</a><br/>
+		<a href="javascript:void(0);" onclick="test3()">测试3</a><br/>
+		<script type="text/javascript">
+			function test1(){
+				var str="abbbbbbzzzzzzbbbddddd";
+				//贪婪模式匹配字符越多越好
+				var strAry=str.split(/b{2,}/);
+				for(var i=0;i<strAry.length;i++ ){
+					alert(strAry[i]);
+				}
+			}
+			function test2(){
+				var str="abbbbbbzzzzzzbbbddddd";
+				//非贪婪模式匹配字符越少越好
+				var strAry=str.split(/b{2,}?/);
+				for(var i=0;i<strAry.length;i++ ){
+					alert(strAry[i]);
+				}
+			}
+			
+			function test3(){
+				var str="abbbcbbbzzzczzzbbbddddd";
+				///i 忽略大小写
+				///g全局进行匹配
+				var strAry=str.split(/(b{2,})(c)/);
+				alert(RegExp.$1);
+				alert(RegExp.$2);
+				alert(RegExp.$3);
+				alert(RegExp.$4);
+			}
+		</script>
+		
+	</body>
+</html>
