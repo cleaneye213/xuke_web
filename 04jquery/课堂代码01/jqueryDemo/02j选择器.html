@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jQuery02</title>
+		<script src="js/jquery-2.1.4.js"></script>
+	</head>
+	<body>
+		用户名：<input type="text" id="userName" name="userName" value="admin" /><br/>
+		密码：<input type="password" id="pwd" name="pwd" value="123456" /><br/>
+		<div>dsddf</div>
+		<script type="text/javascript">
+			//by id   id选择器
+			var uName=$("#userName").val();
+			alert("by id"+uName);
+			//by name==getElementsByName
+			var uNameByNm=$("[name='userName']")[0].value;
+			$.each($("[name='userName']"),function(index,obj){
+				alert("jquery by name:"+$(obj).val());
+			});
+			alert(uNameByNm);
+			
+			//by tagName 标签选择器 有可能获取的是多个
+			var obj=$("input");
+			$.each(obj,function(index,obj){
+				alert("jquery:"+$(obj).val());
+			});
+			for (var i=0;i<obj.length;i++) {
+				//alert(obj[i].value);
+				alert($(obj[i]).val());
+				alert(obj[i].value);
+			}
+		</script>
+	</body>
+</html>

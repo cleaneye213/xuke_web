@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jQuery01</title>
+		<script src="js/jquery-2.1.4.js"></script>
+	</head>
+	<body>
+		用户名：<input type="text" id="userName" name="userName" value="admin" />
+		<div>dsddf</div>
+		<script type="text/javascript">
+			//jquery对象$开头,c存放的是数组
+			var jObj=$("#userName");
+			
+			//js 对象 Dom对象
+			var str=document.getElementById("userName");
+			
+			//jQuery对象->Dom对象
+			var domObj=jObj[0];
+			alert(domObj.value);
+			
+			//Dom对象-->JQuery对象
+			var $jObj=$(domObj);
+			alert($jObj.val());
+		</script>
+	</body>
+</html>

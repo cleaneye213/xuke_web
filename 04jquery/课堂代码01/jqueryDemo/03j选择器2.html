@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>jQuery02</title>
+		<script src="js/jquery-2.1.4.js"></script>
+		<style type="text/css">
+			.myClass{
+				color: aqua;
+			}
+			
+		</style>
+	</head>
+	<body>
+		用户名：<input class="myClass" type="text" id="userName" name="userName" value="admin" /><br/>
+		密码：<input class="test" test="11111" type="password" id="pwd" name="pwd" value="123456" /><br/>
+		<div id="myDiv">dsddf</div>
+		<ul>
+				<li class="test2">111</li>
+				<li class="myClass">111</li>
+				<li>111</li>
+				<li>111</li>
+				<li>111</li>
+			</ul>
+		<script type="text/javascript">
+			//类选择器
+			var nameObj=$(".myClass");
+			$.each(nameObj,function(index,obj){
+				alert($(obj).val());
+			});
+			//不存在的类
+			
+			var pwdVal=$(".test")[0].value;
+			alert(pwdVal);
+			
+			//多选择器
+			var objAry=$("ul,.test2,#myDiv");
+			$.each(objAry,function(index,obj){
+				alert($(obj).html());
+			})
+		</script>
+	</body>
+</html>
