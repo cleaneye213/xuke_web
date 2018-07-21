@@ -1,10 +1,11 @@
 1、扩展Date对象，增加format方法;
+
 2、编写一个dataUtils工具类，并编写测试方法：
 	含有以下方法：
 	//转换当前日期对象为日期字符串 
 	getSmpFormatNowDate(pattern);
 //转换long值为日期字符串 
-getFormatDateByLong(l,pattern);
+getFormatDateByLong(1000000,pattern);
 
 //转换日期对象为日期字符串
 getFormatDate(date, pattern);
