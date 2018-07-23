@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery02</title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+        
+    </style>
+</head>
+
+<body>
+	<input type="text" id="search" name="search" value=""/> <input type="button" id="btn" name="btn" value="查询" />
+	<table width="300px" height="300px" border="1">
+		<tr>
+			<td>aaa</td>
+			<td>222</td>
+			<td>333</td>
+		</tr>
+		<tr>
+			<td>bbb</td>
+			<td>222</td>
+			<td>333</td>
+		</tr>
+		<tr>
+			<td>ccc</td>
+			<td>222</td>
+			<td>333</td>
+		</tr>
+		<tr>
+			<td>ddd</td>
+			<td>222</td>
+			<td>333</td>
+		</tr>
+		<tr>
+			<td>eee</td>
+			<td>222</td>
+			<td>333</td>
+		</tr>
+	</table>
+	
+	<ul>
+			<li>1111</li>
+			<li>3333</li>
+			<li>444</li>
+			<li></li>
+			<li>
+				<ul>
+					<li>9999</li>
+					<li>9999</li>
+					<li></li>
+				</ul>
+			</li>
+		</ul>
+	
+	
+    <script type="text/javascript">
+		$(function(){
+			$("#btn").click(function(){
+				var str=$("#search").val();
+				if(str!=""){
+					$("tr td").css("background","white");
+					$("tr td:contains('"+str+"')").css("background","red");
+				}
+			});
+			
+			//:empty
+			var obj=$(":empty");
+			alert($(":empty").size());
+			//:has(selector)
+			$("li:has(ul)").css("background","red");
+			//:parent  匹配含有子元素或者文本的元素
+			//查找有内容(含有子元素、文本)的元素==>不为空
+			$.each($("li:parent"),function(){
+				alert($(this).text());
+			});
+			
+		});
+		
+		
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery02</title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <input type="text" id="search" name="search" value="" />
+    <input type="button" id="btn" name="btn" value="查询" />
+	<input type="button" id="btn" name="btn" value="新增" />
+    <table width="400px" height="300px" border="1">
+        <tr>
+            <td>用户名</td>
+            <td>
+                <input name="user[0].userName" value="" />
+            </td>
+            <td>性别：</td>
+            <td>
+                <select name="user[0].sex">
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+        	<td>用户名</td>
+        	<td>
+        		<input name="user[1].userName" value="" />
+        	</td>
+        	<td>性别：</td>
+        	<td>
+        		<select name="user[1].sex">
+        			<option value="0">男</option>
+        			<option value="1">女</option>
+        		</select>
+        	</td>
+        </tr>
+		<tr>
+			<td>用户名</td>
+			<td>
+				<input name="user[2].userName" value="" />
+			</td>
+			<td>性别：</td>
+			<td>
+				<select name="user[2].sex">
+					<option value="0">男</option>
+					<option value="1">女</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>用户名</td>
+			<td>
+				<input name="user[3].userName" value="" />
+			</td>
+			<td>性别：</td>
+			<td>
+				<select name="user[3].sex">
+					<option value="0">男</option>
+					<option value="1">女</option>
+				</select>
+			</td>
+		</tr>
+    </table>
+	<div class="errorMsg"></div>
+    <input type="button" id="save" name="save" value="保存" />
+
+
+
+    <script type="text/javascript">
+        $(function () {
+			//子元素选择器 从1开始
+			//查找是第2的tr  查找子元素是第2的tr
+			$("tr:nth-child(2)").css("background","blue");
+			//在tr中,排行第2的子元素
+			$("tr :nth-child(2)").css("background","blue");
+			
+			//查找是第1的tr  查找子元素是第1的tr
+			$("tr:first-child").css("background","yellow");
+        });
+    </script>
+</body>
+
+</html>

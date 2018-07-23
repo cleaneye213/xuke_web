@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery02</title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <input type="text" id="search" name="search" value="" />
+    <input type="button" id="btn" name="btn" value="查询" />
+	<input type="button" id="btn" name="btn" value="新增" />
+    <table width="400px" height="300px" border="1">
+        <tr>
+            <td>用户名</td>
+            <td>
+                <input name="user[0].userName" value="" />
+            </td>
+            <td>性别：</td>
+            <td>
+                <select name="user[0].sex">
+                    <option value="0">男</option>
+                    <option value="1">女</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+        	<td>用户名</td>
+        	<td>
+        		<input name="user[1].userName" value="" />
+        	</td>
+        	<td>性别：</td>
+        	<td>
+        		<select name="user[1].sex">
+        			<option value="0">男</option>
+        			<option value="1">女</option>
+        		</select>
+        	</td>
+        </tr>
+		<tr>
+			<td>用户名</td>
+			<td>
+				<input name="user[2].userName" value="" />
+			</td>
+			<td>性别：</td>
+			<td>
+				<select name="user[2].sex">
+					<option value="0">男</option>
+					<option value="1">女</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>用户名</td>
+			<td>
+				<input name="user[3].userName" value="" />
+			</td>
+			<td>性别：</td>
+			<td>
+				<select name="user[3].sex">
+					<option value="0">男</option>
+					<option value="1">女</option>
+				</select>
+			</td>
+		</tr>
+    </table>
+	<div class="errorMsg"></div>
+    <input type="button" id="save" name="save" value="保存" />
+
+
+
+    <script type="text/javascript">
+        $(function () {
+			//属性新选择器
+			//[属性名]				获得指定的属性名的元素
+			$("input[name='save']").click(function(){
+				alert("保存按钮");
+				//[属性名^=值]
+				//var objAry=$("input[name^='user']");
+				//var objAry=$("[name$='userName']");
+				var objAry=$("[name*='Name']");
+				//验证用户名长度6-->18位
+				$.each(objAry,function(index,obj){
+					var str=$(obj).val();
+					if(str!="" && (str.length<6 || str.length>18)){
+						$(".errorMsg").html($(obj).val()+"用户名的长度为6-18位");
+						$(obj).focus();
+						return false;
+					}
+				})
+			});
+			//[属性名!=值]	
+			
+        });
+    </script>
+</body>
+
+</html>
