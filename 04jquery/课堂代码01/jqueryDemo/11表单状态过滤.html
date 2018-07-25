@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery02</title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <input type="text" id="search" name="search" value="" />
+    <input type="button" id="btn" name="btn" value="查询" />
+    <input type="button" id="btn" name="btn" value="新增" />
+	<input type="button" id="modify" name="modify" value="修改" />
+	<br/><br/>
+    <form name="form1" method="get" action="index.html">
+		<input type="hidden" name="id" value="111" />
+        <table width="100%" height="600px" border="1">
+            <tr>
+                <td style="width: 100px;">用户名</td>
+                <td>
+                    <input name="userName" value="" />
+                </td>
+                <td style="width: 100px;">性别：</td>
+                <td>
+                    <input type="radio" name="sex" value="0" /> 男
+                    <input type="radio" name="sex" value="1" /> 女
+                </td>
+            </tr>
+			<tr>
+				<td style="width: 100px;">用户名1</td>
+				<td>
+					<input name="userName1" readonly="readonly" value="test"/>
+				</td>
+				<td style="width: 100px;">用户名2</td>
+				<td>
+					<input name="userName2" disabled="disabled" value="test2"/>
+				</td>
+			</tr>
+			<tr>
+				<td style="width: 100px;">用户名1</td>
+				<td>
+					<input name="userName3" readonly="readonly" value="444"/>
+				</td>
+				<td style="width: 100px;">用户名2</td>
+				<td>
+					<input name="userName4" disabled="disabled" value="test444"/>
+				</td>
+			</tr>
+            <tr>
+                <td>密码：</td>
+                <td>
+                    <input name="pwd" value="" />
+                </td>
+                <td>学历：</td>
+                <td>
+                    <select name="education">
+                        <option value="001">小学</option>
+                        <option value="002">初中</option>
+                        <option value="003">高中</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>爱好</td>
+                <td>
+                    <input type="checkbox" name="love" value="0" /> 射箭
+                    <input type="checkbox" name="love" value="1" /> 篮球
+                </td>
+                <td>签名</td>
+                <td>
+                    <textarea name="sign"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td>文件</td>
+                <td>
+                    <input type="file" name="file" />
+                </td>
+                <td>头像：</td>
+                <td>
+                    <img src="img/5.png" />
+                </td>
+            </tr>
+        </table>
+        <div class="errorMsg"></div>
+		<br/><br/>
+        <input type="reset" id="reset" name="reset" value="重置" />
+        <button type="button" id="save" name="save">保存</button>
+    </form>
+
+
+    <script type="text/javascript">
+        $(function () {
+			
+			$("#save").click(function(){
+				var disbVal=$(":disabled:first").val();
+				alert("第一个disabled"+disbVal);
+				
+				//:checked		选中（单选框radio、复选框 checkbox）
+				//:selected		选择（下拉列表 select option）
+				var selVal=$(":selected:first").val();
+				alert("第一个select"+selVal);
+				$("form:first").submit();
+			});
+			
+        });
+    </script>
+</body>
+
+</html>

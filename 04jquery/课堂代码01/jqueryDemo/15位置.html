@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-2.1.4.js"></script>
+		<style type="text/css">
+			.big {
+				width: 600px;
+				height: 600px;
+				background-color: aqua;
+				border: 1px solid #A52A2A;
+			}
+			.middle {
+				width: 150px;
+				height: 150px;
+				background-color: brown;
+				border: 1px solid blue;
+			}
+			.divfont{
+				font-size: 24px;
+			}
+			.small {
+				width: 50px;
+				height: 50px;
+				background-color: greenyellow;
+				border: 1px solid greenyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<button>更改位置</button>
+		<div class="big">祖父
+			<div class="middle">大儿子
+				<div class="small">大孙子1
+					<input name="ss" type="text" value="大孙子" />
+				</div>
+			</div>
+			<div class="middle">二儿子
+				<input name="ss" type="text" value="二儿子" />
+				<div class="small">二孙子
+				</div>
+			</div>
+			<div class="middle">三儿子
+				<div class="small">三孙子
+				</div>
+			</div>
+		</div>
+		<div class="big">11111111
+		</div>
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					//获取html元素的位置
+					//获取到的是json对象返回JSON对象，{"top":200, "left" : 100}
+					var jsonObj=$(".small:eq(1)").offset();
+					alert('{"top":'+jsonObj.top+', "left" :'+jsonObj.left+' }');
+					
+					//赋值
+					$(".small:eq(1)").offset({"top":jsonObj.top, "left" : 100});
+					
+					alert($(window).scrollTop());
+					$(window).scrollTop(25);
+				});
+			});
+		</script>
+			
+	</body>
+</html>

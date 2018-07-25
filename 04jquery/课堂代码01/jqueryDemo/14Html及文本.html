@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-2.1.4.js"></script>
+		<style type="text/css">
+			.big {
+				width: 600px;
+				height: 600px;
+				background-color: aqua;
+				border: 1px solid #A52A2A;
+			}
+			.middle {
+				width: 150px;
+				height: 150px;
+				background-color: brown;
+				border: 1px solid blue;
+			}
+			.divfont{
+				font-size: 24px;
+			}
+		</style>
+	</head>
+	<body>
+		<button>更改属性</button>
+		<div class="big" title="这是div">
+			dddd<img src="img/5.png" />
+		</div>
+		<div class="middle big">ddddd</div>
+		<div>什么都没有</div>
+		
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					//在div中插入图片
+					var imgStr='<img src="img/8.png" />';
+					//会覆盖div里已有的所有的Html内容
+					$("div:eq(1)").html($("img"));
+					$("div:eq(2)").html(imgStr);
+					alert($("div:eq(1)").html());
+					//获取到的是dddd 不含html元素
+					alert($("div:eq(0)").text());
+					alert($("div:eq(0)").text("000000000000000"));
+				});
+			});
+		</script>
+			
+	</body>
+</html>

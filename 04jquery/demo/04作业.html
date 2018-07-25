@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/jquery-3.1.1.min.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#b").click(function(){
+                var val=$("input:checked").val();
+                switch(val) {
+                    case 'a':
+                        $("img").attr('src','../img/a.jpg');
+                        break;
+                    case 'b':
+                        $("img").attr('src','../img/b.jpg');
+                        break;
+                    case 'c':
+                        $("img").attr('src','../img/c.jpg');
+                        break;
+                    case 'd':
+                        $("img").attr('src','../img/d.jpg');
+                        break;
+                    case 'e':
+                        $("img").attr('src','../img/e.jpg');
+                        break;
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+<img src="../img/b.jpg"/>
+<br />
+<h1>请选择水果</h1>
+<input type="radio" name="fruit" value="a" checked="checked" />香蕉
+<input type="radio" name="fruit" value="b" />梨
+<input type="radio" name="fruit" value="c" />葡萄
+<input type="radio" name="fruit" value="d" />苹果
+<input type="radio" name="fruit" value="e" />西瓜
+<input type="button" id="b" value="改变图片" />
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse:collapse;
+        }
+        td{
+            border: 1px solid black;
+            width: 200px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <tr>
+        <td>书名</td>
+        <td>价格</td>
+    </tr>
+    <tr id="tr2">
+        <td>看得见风景的房间</td>
+        <td>￥30.00</td>
+    </tr>
+    <tr>
+        <td>60个瞬间</td>
+        <td>￥60.00</td>
+    </tr>
+
+</table>
+<button id="button1">增加一行</button>
+<button id="button2">删除第二行</button>
+<button id="button3">修改标题样式</button>
+<button id="button4">复制最后一行</button>
+</body>
+<script type="text/javascript">
+    var td=$("<tr><td>幸福从天而降</td><td>￥18.50</td></tr>");
+    $('#button1').click(function(){
+        var tdc=td.clone();
+        $(tdc).insertAfter($('#tr2'));
+        $('#tr2').after($(tdc));
+    })
+    $('#button2').click(function(){
+        var tr2=$('table tr:eq(2)');//eq(2)表示第三行。
+        tr2.remove();
+    })
+    $('#button3').click(function(){
+        $('table tr:eq(0)').
+                css({'color':'red','font-size':'20px','font-weight':'bolder'});
+    })
+    $('#button4').click(function(){
+        $('table tr:last-child').clone().appendTo('table');
+    })
+</script>
+</html>

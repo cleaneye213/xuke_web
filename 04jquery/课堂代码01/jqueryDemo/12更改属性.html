@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-2.1.4.js"></script>
+		<style type="text/css">
+			.big {
+				width: 600px;
+				height: 600px;
+				background-color: aqua;
+				border: 1px solid #A52A2A;
+			}
+			.middle {
+				width: 150px;
+				height: 150px;
+				background-color: brown;
+				border: 1px solid blue;
+			}
+			.divfont{
+				font-size: larger;
+			}
+		</style>
+	</head>
+	<body>
+		<button>更改属性</button>
+		<div class="big divfont" title="这是div">
+			dddd<img src="img/5.png" />
+		</div>
+		<div class="big divfont">ddddd</div>
+		
+		<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					//获取属性
+					alert($("img").eq(0).attr("src"));
+					
+					//更改属性
+					$("img").eq(0).attr("src","img/8.png");
+					
+					//更改样式类
+					//直接覆盖
+					$("div:eq(1)").attr("class","middle");
+					//
+					$("img").eq(0).removeAttr("src");
+				});
+			});
+		</script>
+			
+	</body>
+</html>

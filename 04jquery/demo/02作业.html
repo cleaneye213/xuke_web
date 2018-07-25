@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>单选水果，点击改变图片，显示选择的水果图片</title>
+    <script type="text/javascript" src="../../js/jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div>
+    <img src="../../image/水果.jpg" alt=""/>
+    选择你喜欢的水果
+    <input type="radio" value="pg" name="sg"/>苹果
+    <input type="radio" value="cz" name="sg"/>橙子
+    <input type="radio" value="yt" name="sg"/>油桃
+    <input type="radio" value="mht" name="sg"/>猕猴桃
+    <input type="radio" value="cm" name="sg"/>草莓
+    <button>点击查看水果图片</button>
+</div>
+
+</body>
+<script type="text/javascript">
+    $('button').click(function () {//button点击的方法，click
+        if ($('input:radio[value="pg"]:checked').val()) {
+            $('img').attr('src','../../image/苹果.jpg');
+
+        }
+        if ($('input:radio[value="cz"]:checked').val()) {
+            $('img').attr('src','../../image/橙子.jpg');
+        }
+        if ($('input:radio[value="yt"]:checked').val()) {
+            $('img').attr('src','../../image/油桃.jpg');
+        }
+        if ($('input:radio[value="mht"]:checked').val()) {
+            $('img').attr('src','../../image/猕猴桃.jpg');
+        }
+        if ($('input:radio[value="cm"]:checked').val()) {
+            $('img').attr('src','../../image/草莓.jpg');
+        }
+    })
+</script>
+</html>
