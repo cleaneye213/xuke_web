@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+        .big {
+            width: 600px;
+            height: 600px;
+            background-color: aqua;
+            border: 1px solid #A52A2A;
+        }
+
+        .middle {
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            border: 1px solid blue;
+        }
+
+        .divfont {
+            font-size: 24px;
+        }
+
+        .small {
+            width: 50px;
+            height: 50px;
+            background-color: greenyellow;
+            border: 1px solid greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button>新增</button>
+    
+   <ul>
+   		<li class="test2">111</li>
+   		<li class="myClass">111</li>
+   		<li>111</li>
+   		<li>111</li>
+   		<li>111</li>
+   	</ul>
+	<div style="overflow: auto;width: 200px;height: 200px;">
+		<img src="img/8.jpg" alt="图片展示" width="300px" height="300px"/>
+	</div>
+	<img src="dddd" alt="图片展示"/>
+	<p></p>
+    <script type="text/javascript">
+        $(function () {
+			$("li").mouseenter(function(){
+				//alert(1);
+				$(this).css({color: "#ff0011", background: "blue"});
+			});
+			
+			$("li").mouseout(function(){
+				$(this).css({color: "black", background: "white"});
+			});
+			//改变元素大小触发事件
+			$(window).resize(function(){
+				$("div:eq(0)").text($(this).width()+":"+$(this).height());
+			});
+			$("img").error(function(){
+				//alert("1");
+				$(this).attr("src","img/7.png");
+			});
+			
+			$("div:eq(0)").scroll(function(){
+				$("p").html($(this).width()+":"+$(this).height());
+			});
+        });
+    </script>
+
+</body>
+
+</html>

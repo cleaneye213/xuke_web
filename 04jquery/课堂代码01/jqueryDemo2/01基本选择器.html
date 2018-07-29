@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>jQuery02</title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+        .big {
+            width: 600px;
+            height: 600px;
+            background-color: aqua;
+            border: 1px solid #A52A2A;
+        }
+
+        .middle {
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            border: 1px solid blue;
+        }
+
+        .small {
+            width: 50px;
+            height: 50px;
+            background-color: greenyellow;
+            border: 1px solid greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+	<button>has()</button>
+	<button>slice(start , end)  截取元素 ，[2,4)</button>
+	<button>map()</button>
+	<button>base</button>
+    <div class="big">祖父
+        <div class="middle">大儿子
+            <div class="small">大孙子1
+                <input name="ss" type="text" value="大孙子" />
+            </div>
+        </div>
+        <div class="middle">二儿子
+            <input name="ss" type="text" value="二儿子" />
+            <div class="small testClass">二孙子
+            </div>
+        </div>
+        <div class="middle">三儿子
+            <div class="small">三孙子
+            </div>
+        </div>
+		<input id="ss" name="ss" type="text" value="外人" />
+    </div>
+    <input id="ss1" name="ss" type="text" value="外人" />
+    <script type="text/javascript">
+        //基本选择
+		$(function(){
+			
+			$("button").eq(0).click(function(){
+				//has("一个选择器字符");
+				var obj=$("div").has(".small");
+				$.each(obj,function(){
+					alert($(this).text());
+				});
+				//has(jquery对象);
+				obj=$("div").has($("#ss"));
+				$.each(obj,function(){
+					alert($(this).text());
+				});
+			});
+			$("button").eq(1).click(function(){
+				//slice(start , end)  截取元素 ，[2,4)  --> 2,3
+				//从索引2开始,取到3..不包含4索引
+				var obj=$("div").slice(2,4);
+				$.each(obj,function(){
+					alert($(this).text());
+				});
+			});
+			$("button").eq(2).click(function(){
+				var obj=$("div").slice(2,4);
+// 				var str=$(obj).map(function(){
+// 					return $(this).text();
+// 				}).get().join(",");
+				//上面代码等价于以下
+				var strAry=$(obj).map(function(){
+					return $(this).text();
+				});
+				for(var i=0;i<strAry.length;i++){
+					alert(strAry[i]);
+				}
+			});
+			
+			
+			$("button").eq(3).click(function(){
+				//eq() 等价于:eq()
+				//alert($("div").eq(4).html());
+				//console.log($("div").eq(4).html());
+				
+				//hasClass==is(".testClass")
+				//alert($("div").eq(4).hasClass("testClass"));
+				//alert($("div").eq(4).is(".testClass"));
+				
+				//filter();获取符合filter里的元素对象
+				//alert($("div").filter($(".small")).length);
+				var divObj=$("div").filter($(".small"));
+				$.each(divObj,function(){
+					alert($(this).text());
+				});
+				
+				//过滤掉not()里的元素
+				divObj=$("div").not($(".small"));
+				$.each(divObj,function(){
+					alert($(this).text());
+				});
+			});
+			
+			
+		});
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+        .big {
+            width: 600px;
+            height: 600px;
+            background-color: aqua;
+            border: 1px solid #A52A2A;
+        }
+
+        .middle {
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            border: 1px solid blue;
+        }
+
+        .divfont {
+            font-size: 24px;
+        }
+
+        .small {
+            width: 50px;
+            height: 50px;
+            background-color: greenyellow;
+            border: 1px solid greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button>新增</button>
+
+    <ul>
+        <li class="test2">111</li>
+        <li class="myClass">111</li>
+        <li>111</li>
+        <li>111</li>
+        <li>111</li>
+    </ul>
+	
+	<div class="big"></div>
+	
+    <script type="text/javascript">
+        $(function () {
+//             $("li").mouseover(function () {
+//                 //alert(1);
+//                 $(this).css({
+//                     color: "#ff0011",
+//                     background: "blue"
+//                 });
+//             });
+// 
+//             $("li").mouseout(function () {
+//                 $(this).css({
+//                     color: "black",
+//                     background: "white"
+//                 });
+//             });
+			
+			//切换 fun1:mouseover,fun2:mouseout
+			$("li").hover(function(){
+				$(this).css({
+					color: "#ff0011",
+					background: "blue"
+				});
+			},function(){
+				$(this).css({
+					color: "black",
+					background: "white"
+				});
+			})
+			
+			$("div").toggle(function(){
+				$(this).attr("class","middle");
+			},function(){
+				$(this).attr("class","small");
+			})
+        });
+    </script>
+
+</body>
+
+</html>

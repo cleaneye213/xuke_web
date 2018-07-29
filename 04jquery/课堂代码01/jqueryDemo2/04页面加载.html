@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+        .big {
+            width: 600px;
+            height: 600px;
+            background-color: aqua;
+            border: 1px solid #A52A2A;
+        }
+
+        .middle {
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            border: 1px solid blue;
+        }
+
+        .divfont {
+            font-size: 24px;
+        }
+
+        .small {
+            width: 50px;
+            height: 50px;
+            background-color: greenyellow;
+            border: 1px solid greenyellow;
+        }
+    </style>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				alert(3);
+			});
+		</script>
+</head>
+
+<body>
+    <button>新增</button>
+  
+    <script type="text/javascript">
+				//页面加载完后开始执行
+				//只能写一个
+				window.onload=function(){
+					
+				};
+			
+				//页面加载 页面加载完后开始执行
+				//这里可以写多个
+				//多个的情况下,按顺序执行
+				$(document).ready(function(){
+					alert(1);
+				});
+				
+        $(function () {
+					alert(2);
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+        .big {
+            width: 600px;
+            height: 600px;
+            background-color: aqua;
+            border: 1px solid #A52A2A;
+        }
+
+        .middle {
+            width: 150px;
+            height: 150px;
+            background-color: brown;
+            border: 1px solid blue;
+        }
+
+        .divfont {
+            font-size: 24px;
+        }
+
+        .small {
+            width: 50px;
+            height: 50px;
+            background-color: greenyellow;
+            border: 1px solid greenyellow;
+        }
+    </style>
+</head>
+
+<body>
+    <button>新增</button>
+    
+    <table width="300px" height="100%" border="1">
+		<th height="35px" style="width: 40px;">
+			序号
+		</th>
+        <th height="35px" width="40px">
+            用户名
+        </th>
+        <th height="35px" width="40px">
+            密码
+        </th>
+		<th height="35px" width="40px">
+			操作
+		</th>
+        <tr>
+			<td height="35px">
+				1
+			</td>
+            <td height="35px">
+                <input type="text" name="userName" />
+            </td>
+            <td height="35px">
+                <input type="text" name="pwd" />
+            </td>
+			<td height="35px">
+				<button>删除</button>
+			</td>
+        </tr>
+        <tr>
+			<td height="35px">
+				2
+			</td>
+            <td>
+                <input type="text" name="userName" />
+            </td>
+            <td>
+                <input type="text" name="pwd" />
+            </td>
+			<td height="35px">
+				<button>删除</button>
+			</td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        $(function () {
+			//绑定新增事件
+            $("button:eq(0)").click(function () {
+				//一种做法直接拼接字符串,-->appendTo到table里
+				//这边复制clone();
+				//clone(true)-->设置为true时,会把元素里的事件一起复制
+				var clnObj=$("table tr").eq(1).clone(true);
+				$(clnObj).appendTo($("table").eq(0));
+				//$("table").eq(0).append(clnObj);
+				
+				//更改序号
+				//做法一:更改clnObj里的第一个td里的text,为最新的index
+				var index=$("table tr").length-1;
+				$(clnObj).find("td:first").text(index);
+				
+				
+            });
+			
+			//绑定删除事件
+			$("table tr td").find("button").click(function () {
+				//获取当前的索引
+				var delObj=$(this).parent().parent();
+				var index=$(delObj).find("td:first").text();
+				index=$.trim(index);
+				index=parseInt(index);
+				//删除前总的记录条数
+				var tatalTr=$("table tr").length;
+				
+				//找到该删除按钮所在的tr,把它从table中移除
+				$(this).parent().parent().remove();
+				//更改索引
+				var objAry=$("table tr:gt("+(index-1)+")");
+				$.each(objAry,function(){
+					// var indeTemp=$(this).find("td:eq(0)").text();
+					// indeTemp=parseInt(indeTemp)-1;
+					$(this).find("td:eq(0)").text(index);
+					index++;
+				});
+            });
+        });
+    </script>
+
+</body>
+
+</html>

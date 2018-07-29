@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<script src="js/jquery-2.1.4.js"></script>
+		<style type="text/css">
+			div{
+				width: 400px;
+				height: 300px;
+				overflow: auto;
+				margin-top: 50px;
+				padding-left: 100px;
+			}
+			ul{
+				list-style: none;
+				float: left;
+			}
+			
+			li{
+				width: 100px;
+				height: 35px;
+				background-color: #ADFF2F;
+				float: left;
+				text-align: center;
+				line-height: 32px;
+			}
+			
+			/*li ul{
+				display: none;
+			}*/
+			
+			
+			a{
+				font-size: 14px;
+				color: #FFFFFF;
+				text-decoration: none;
+			}
+			
+			a:hover{
+				color: #FFC0CB;
+			}
+		</style>
+	</head>
+	<body>
+		<div>			
+			<ul id="pul">
+				<li>
+					<a href="#">javase</a>
+					<ul>
+						<li><a href="#">javase111</a></li>
+						<li><a href="#">javase222</a></li>
+						<li><a href="#">javase222</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">javaWeb</a>
+					<ul>
+						<li><a href="#">javaWeb111</a></li>
+						<li><a href="#">javaWeb222</a></li>
+						<li><a href="#">javaWeb222</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">javaEE</a>
+					<ul>
+						<li><a href="#">javaEE111</a></li>
+						<li><a href="#">javaEE222</a></li>
+						<li><a href="#">javaEE222</a></li>
+					</ul>
+				</li>
+			</ul>
+			
+			<script type="text/javascript">
+				$(function(){
+					$("li ul").hide();
+					//$("li").find("ul").hide();
+					
+					//.stop()阻止排队
+// 					$("div ul:first").find("li").mouseover(function(){
+// 						$(this).find("ul").stop().slideDown();
+// 					});
+// 					
+// 					$("div ul:first").find("li").mouseout(function(){
+// 						$(this).find("ul").stop().slideUp();
+// 					});
+					
+					//hover 里两个fun如果代码一样,可以只写一个fun
+					$("div ul:first").find("li").hover(function(){
+						$(this).find("ul").stop().slideDown();
+					},function(){
+						$(this).find("ul").stop().slideUp();
+					})
+				});
+				
+			</script>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="js/jquery-2.1.4.js"></script>
+    <style type="text/css">
+        div {
+            width: 500px;
+            height: 400px;
+						margin: 0 auto;
+						padding-top: 30px;
+        }
+
+				ul{
+					list-style: none;
+					float: left;
+				}
+				
+				li ul{
+					display: none;
+				}
+				
+				li{
+					float: left;
+					width: 100px;
+					height: 35px;
+					background-color: #ADFF2F;
+					text-align: center;
+					line-height: 32px;
+				}
+				
+				a{
+					color: white;
+					text-decoration: none;
+					font-size: 14px;
+				}
+				a:hover{
+					background-color: #FFC0CB;
+				}
+    </style>
+</head>
+
+<body>
+    <div>			
+			<ul id="pul">
+				<li>
+					<a href="#">javase</a>
+					<ul>
+						<li><a href="#">javase111</a></li>
+						<li><a href="#">javase222</a></li>
+						<li><a href="#">javase222</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">javaWeb</a>
+					<ul>
+						<li><a href="#">javaWeb111</a></li>
+						<li><a href="#">javaWeb222</a></li>
+						<li><a href="#">javaWeb222</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="#">javaEE</a>
+					<ul>
+						<li><a href="#">javaEE111</a></li>
+						<li><a href="#">javaEE222</a></li>
+						<li><a href="#">javaEE222</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+    <script type="text/javascript">
+        $(function () {
+					
+					$("#pul").children("li").mouseover(function(){
+						$(this).find("ul").stop().slideDown();
+					});
+					
+					$("#pul").children("li").mouseout(function(){
+						$(this).find("ul").stop().slideUp();
+					});
+				});
+    </script>
+
+</body>
+
+</html>
