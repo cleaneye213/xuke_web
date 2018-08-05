@@ -72,7 +72,9 @@ create table s_user1(
 );
 
 /*s_user里的记录插入到s_user1里*/
-/* 必须写上表的字段，个数要对应上*/
+/* 必须写上表的字段，个数要对应上
+	数据类型要一致即可
+*/
 insert into s_user1(id,user_name,sex,login_name,salary,love,create_time,my_timestamp) 
 	select id,user_name,sex,login_name,salary,love,create_time,my_timestamp from s_user;
 
